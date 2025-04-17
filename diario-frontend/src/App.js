@@ -7,30 +7,32 @@ import NewPost from './NewPost';
 function App() {
   return (
     <Router>
-      <div id="wrapper">
-        <header id="header">
-          <a href="/" className="logo">Meu Diário</a>
-        </header>
+      
+      {/* Estrutura do Massively */}
 
-        <nav id="nav">
-          <ul className="links">
-            <li><a href="/">Home</a></li>
-            <li><a href="/new">Nova Postagem</a></li>
-          </ul>
-        </nav>
+      <header id="header">
+        <a href="/" className="logo">Meu Diário</a>
+      </header>
+      
+      <nav id="nav">
+        <ul className="links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/new">Nova Postagem</a></li>
+        </ul>
+      </nav>
 
-        <div id="main">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/post/:id" element={<Post />} />
-            <Route path="/new" element={<NewPost />} />
-          </Routes>
-        </div>
-
-        <footer id="footer">
-          <p>Feito com React e Massively</p>
-        </footer>
+      {/* Área onde as páginas serão direcionadas */}
+      <div id="main">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/post/:id" element={<Post />} />
+          <Route path="/new" element={<NewPost />} />
+        </Routes>
       </div>
+
+      <footer id="footer">
+        <p>Feito por Guilherme Santos</p>
+      </footer>
     </Router>
   );
 }
